@@ -1,0 +1,30 @@
+{
+  "name": "bdd_template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js test",
+    "allure:report": "allure generate allure-results --clean -o allure-report",
+    "allure:clear": "rimraf allure-results && rimraf allure-report && rimraf test-results",
+    "pretest": "npm run allure:clear",
+    "posttest": "npm run allure:report",
+    "showReport": "npx allure serve allure-results"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.7.0",
+    "@playwright/test": "^1.44.0",
+    "@types/cucumber": "^7.0.0",
+    "@types/node": "^20.12.12",
+    "@wdio/allure-reporter": "^8.36.1",
+    "allure-commandline": "^2.29.0",
+    "allure-cucumberjs": "^2.15.1",
+    "allure-playwright": "^2.15.1",
+    "cucumber": "^6.0.7",
+    "rimraf": "^5.0.7",
+    "ts-node": "^10.9.2"
+  }
+}
